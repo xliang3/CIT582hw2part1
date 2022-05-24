@@ -44,11 +44,11 @@ def hash_collision(k):
     y = str(n).encode('utf-8')
     y_code = hashlib.sha256(y).hexdigest()
     y_str = helper(y_code, k)
-    # while x_str != y_str:
-    #     n += 1
-    #     y = str(n).encode('utf-8')
-    #     y_code = hashlib.sha256(y).hexdigest()
-    #     y_str = helper(y_code)
+    while x_str != y_str:
+        n += 1
+        y = str(n).encode('utf-8')
+        y_code = hashlib.sha256(y).hexdigest()
+        y_str = helper(y_code, k)
     return( b'\x00',b'\x00' )
 
 
