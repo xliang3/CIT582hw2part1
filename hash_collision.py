@@ -39,12 +39,11 @@ def hash_collision(k):
     n = random.randint(1, 10000000)
     x = str(n).encode('utf-8')
     x_code = hashlib.sha256(x).hexdigest()
-    print(type(x_code), x_code)
     x_str = helper(x_code)
-    # n += 1
-    # y = str(n).encode('utf-8')
-    # y_code = hashlib.sha256(y).hexdigest()
-    # y_str = helper(y_code)
+    n += 1
+    y = str(n).encode('utf-8')
+    y_code = hashlib.sha256(y).hexdigest()
+    y_str = helper(y_code)
     # while x_str != y_str:
     #     n += 1
     #     y = str(n).encode('utf-8')
