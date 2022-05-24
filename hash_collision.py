@@ -12,7 +12,8 @@ def hash_collision(k):
    
     #Collision finding code goes here
     n = random.randint(1, 10000000)
-    # x = hashlib.sha256(n.encode('utf-8'))
+    print(n)
+    x = hashlib.sha256(n.encode('utf-8'))
     # n += 1
     # y = hashlib.sha256(n.encode('utf-8'))
     # while x[256-k:] != y[256-k:]:
