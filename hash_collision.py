@@ -12,7 +12,7 @@ def hash_collision(k):
     #Collision finding code goes here
     x = b'\x00'
     y = b'\x00'
-    
+    print(x, y)
     return( x, y )
 
 
