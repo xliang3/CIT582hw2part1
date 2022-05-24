@@ -11,9 +11,13 @@ def hash_collision(k):
         return( b'\x00',b'\x00' )
    
     #Collision finding code goes here
-    x = random.randint(1, 10000000)
-    y = x+1
-    
+    n = random.randint(1, 10000000)
+    x = hashlib.sha256(n.encode('utf-8'))
+    n += 1
+    y = hashlib.sha256(n.encode('utf-8'))
+    while x[256-k:] != y[256-k:]:
+        n += 1 
+        y = hashlib.sha256(n.encode('utf-8'))
     print(x, y)
     return( x, y )
 
