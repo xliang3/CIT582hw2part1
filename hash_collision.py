@@ -15,9 +15,9 @@ def hash_collision(k):
     x = hashlib.sha256(n.encode('utf-8'))
     n += 1
     y = hashlib.sha256(n.encode('utf-8'))
-    while x[256-k:] != y[256-k:]:
-        n += 1 
-        y = hashlib.sha256(n.encode('utf-8'))
+    # while x[256-k:] != y[256-k:]:
+    #     n += 1 
+    #     y = hashlib.sha256(n.encode('utf-8'))
     print(x, y)
     return( x, y )
 
