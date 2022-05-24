@@ -32,7 +32,6 @@ def hash_collision(k):
         s = ''
         for letter in code:
             s += dic[letter]
-        print(s[256-k:])
         return s[256-k:]
 
 
@@ -49,6 +48,6 @@ def hash_collision(k):
         y = str(n).encode('utf-8')
         y_code = hashlib.sha256(y).hexdigest()
         y_str = helper(y_code, k)
-    return( b'\x00',b'\x00' )
+    return( x, y )
 
 
