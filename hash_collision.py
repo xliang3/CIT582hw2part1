@@ -40,7 +40,7 @@ def hash_collision(k):
     x = str(n).encode('utf-8')
     x_code = hashlib.sha256(x).hexdigest()
     print(type(x_code), x_code)
-    # x_str = helper(x_code)
+    x_str = helper(x_code)
     # n += 1
     # y = str(n).encode('utf-8')
     # y_code = hashlib.sha256(y).hexdigest()
