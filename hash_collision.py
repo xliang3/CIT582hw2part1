@@ -33,6 +33,7 @@ def hash_collision(k):
         for letter in code:
             s += dic[letter]
         print(s)
+        print(k)
         return s[256-k:]
 
 
