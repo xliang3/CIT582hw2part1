@@ -1,5 +1,6 @@
 import hashlib
 import os
+import random
 
 def hash_collision(k):
     if not isinstance(k,int):
@@ -10,8 +11,9 @@ def hash_collision(k):
         return( b'\x00',b'\x00' )
    
     #Collision finding code goes here
-    x = b'\x00'
-    y = b'\x00'
+    x = random.randint(1, 10000000)
+    y = x+1
+    
     print(x, y)
     return( x, y )
 
